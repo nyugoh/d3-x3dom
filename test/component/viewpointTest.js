@@ -4,22 +4,22 @@ let d3X3dom = require("../../");
 test("Test Viewpoint Base Component, component.viewpoint()", function(t) {
 	let viewPoint = d3X3dom.component.viewpoint();
 
-	// Test Getter and Setter functions for Center of Rotation
+	// Test centerOfRotation getter / setter function
 	t.deepEqual(viewPoint.centerOfRotation(), [0.0, 0.0, 0.0], "Center of rotation should [0.0, 0.0, 0.0]");
 	viewPoint.centerOfRotation([1.0, 1.0, 1.0]);
 	t.deepEqual(viewPoint.centerOfRotation(), [1.0, 1.0, 1.0]);
 
-	// Test Getter and Setter functions for view position
+	// Test viewPosition getter / setter function
 	t.deepEqual(viewPoint.viewPosition(), [80.0, 15.0, 80.0], "View position should be [80.0, 15.0, 80.0]");
 	viewPoint.viewPosition([100.0, 100.0, 100.0]);
 	t.deepEqual(viewPoint.viewPosition(), [100.0, 100.0, 100.0]);
 
-	// Test Getter and Setter functions for view orientation
+	// Test viewOrientation getter / setter function
 	t.deepEqual(viewPoint.viewOrientation(), [0.0, 1.0, 0.0, 0.8], "View orientation should be [0.0, 1.0, 0.0, 0.8]");
 	viewPoint.viewOrientation([1.0, 0.0, 0.0, 0.8]);
 	t.deepEqual(viewPoint.viewOrientation(), [1.0, 0.0, 0.0, 0.8]);
 
-	// Test Getter and Setter functions for field of view
+	// Test fieldOfView getter / setter function
 	t.deepEqual(viewPoint.fieldOfView(), 0.8, "Field of view should be 0.8");
 	viewPoint.fieldOfView(1.0);
 	t.deepEqual(viewPoint.fieldOfView(), 1.0);
